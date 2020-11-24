@@ -11,3 +11,6 @@ Basic Javascript DOM manipulation Guess My Number Game
 [Play Guess My Number](https://kirianabrown.github.io/guess-my-number/)
 
 ![Guess My Number](project.png)
+
+### Project Credit
+Jonas Schmedtmann
