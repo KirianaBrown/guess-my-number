@@ -1,7 +1,6 @@
 'use strict';
 
-/*
-   
+/*  
   1. set a random number
   2. get user input
   3. compare user input
@@ -9,14 +8,6 @@
   5. decrease score (1) if incorrect
   6. if correct add success class / save score to highscore / update message / add random number in ?
   7. if again clicked reset all except highscore
-
-
-  if(gamePlaying){
-    // set the variables
-    // create a random number
-    // 
-  }
-
 */
 
 // ######## DOM STRINGS ##########
@@ -85,6 +76,7 @@ const compareGuess = function(guess) {
 const init = function() {
     // If game playing is false
     score = 20;
+    randomNumber = Math.trunc(Math.random() * 20 + 1);
     displayMessage('Start guessing...');
     domElements.scoreMessage.textContent = domElements.scoreMessage.textContent = `💯 Score: ${score}`;
     domElements.number.textContent = '?';
