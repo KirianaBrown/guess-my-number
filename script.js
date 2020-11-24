@@ -41,6 +41,14 @@ const displayMessage = function(message) {
     domElements.message.textContent = message;
 }
 
+const setBackground = function(color) {
+    document.body.style.backgroundColor = color;
+}
+
+const setScoreMessage = function(score) {
+    domElements.scoreMessage.textContent = `💯 Score: ${score}`
+}
+
 
 const compareGuess = function(guess) {
     // ######## CONDITIONALS ##########
@@ -48,12 +56,12 @@ const compareGuess = function(guess) {
         if (guess < randomNumber) {
             console.log('Guess is lower than random Number')
             score--;
-            domElements.scoreMessage.textContent = `💯 Score: ${score}`
+            setScoreMessage(score);
             displayMessage('📉 Too low!')
         } else if (guess > randomNumber) {
             console.log('Guess is higher than the random Number')
             score--;
-            domElements.scoreMessage.textContent = `💯 Score: ${score}`
+            setScoreMessage(score);
             displayMessage('📈 Too high!')
         } else {
             console.log('Both guess and random number are the same')
@@ -61,14 +69,15 @@ const compareGuess = function(guess) {
                 highScore = score;
                 domElements.highScore.textContent = highScore;
             }
-            document.body.style.backgroundColor = '#60b347';
+            setBackground('#60b347');
             domElements.number.textContent = randomNumber;
             displayMessage('🎉 Correct Number!')
         }
     } else {
         displayMessage('💥 You lost the game!')
-        domElements.scoreMessage.textContent = `💯 Score: ${score}`;
-        document.body.style.backgroundColor = 'crimson';
+        setScoreMessage(score);
+        setBackground('crimson');
+        domElements.number.textContent = randomNumber;
     }
 }
 
@@ -79,7 +88,7 @@ const init = function() {
     displayMessage('Start guessing...');
     domElements.scoreMessage.textContent = domElements.scoreMessage.textContent = `💯 Score: ${score}`;
     domElements.number.textContent = '?';
-    document.body.style.backgroundColor = '#222';
+    setBackground('#222');
     domElements.userInput.value = '';
 }
 
