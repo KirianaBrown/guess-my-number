@@ -8,6 +8,6 @@ Basic Javascript DOM manipulation Guess My Number Game
 
 ### View Project here
 
-[Play Guess My Number](http://github.com)
+[Play Guess My Number](https://kirianabrown.github.io/guess-my-number/)
 
 ![Guess My Number](project.png)
