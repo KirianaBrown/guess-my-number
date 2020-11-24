@@ -84,7 +84,7 @@ const compareGuess = function(guess) {
 // ######## INIT function ##########
 const init = function() {
     // If game playing is false
-    score = score;
+    score = 20;
     displayMessage('Start guessing...');
     domElements.scoreMessage.textContent = domElements.scoreMessage.textContent = `💯 Score: ${score}`;
     domElements.number.textContent = '?';
